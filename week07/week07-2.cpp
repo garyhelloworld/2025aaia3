@@ -1,0 +1,21 @@
+// week07-2.cpp 像畫星星一樣
+// 畫出超大的正方形，數字包起來
+// TAICA 交大基礎程式設計(C++) 期中考題 第6題
+#include <iostream>
+#include <cmath> // 就是C的 math.h 裡面有 sin() cos() abs()
+using namespace std;
+int main()
+{
+    int n; // // Part 1: Input
+    cin >> n;
+
+    for (int i=1; i<n*2; i++) { // // Part 2: Output
+        for (int j=1; j<n*2; j++) {
+            // // 印出來之後，發現正中心的1很有意思
+            int d = max(abs(i-n), abs(j-n));
+            cout << d; // // cout << n;
+        }
+        cout << " 現在是: " << i << endl; // // 樓梯
+    }
+    // // 2會有3層樓, 3會有5層樓, 4會有7層樓, 5會有9層樓
+}
